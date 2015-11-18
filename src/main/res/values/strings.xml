@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TabBar</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="tabs">
+
+        <item>"微信"</item>
+        <item>"通讯录"</item>
+        <item>"发现"</item>
+        <item>"我"</item>
+
+    </string-array>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
