@@ -143,7 +143,7 @@ public class TabBar extends LinearLayout implements View.OnClickListener{
      * 选中某个选项
      * @param index 选项下标
      */
-    private void setSelected(int index){
+    public void setSelected(int index){
 
         //清空
         cleraAllTextColor();

@@ -1,16 +1,16 @@
 package com.example.xingfeng.tabbar.example;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import  android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 
 import com.example.xingfeng.tabbar.R;
 import com.example.xingfeng.tabbar.view.TabBar;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FragmentActivity {
 
     private TabBar mTabBar;
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final FragmentManager fragmentManager=getFragmentManager();
+        final FragmentManager fragmentManager=getSupportFragmentManager();
         final FragmentTransaction transaction=fragmentManager.beginTransaction();
         transaction.add(R.id.content,currentFragment);
         transaction.commit();
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(View v) {
 
-                FragmentManager manager=getFragmentManager();
+                FragmentManager manager=getSupportFragmentManager();
                 FragmentTransaction myTransaction=manager.beginTransaction();
                 currentFragment=fragments[(Integer) v.getTag()];
                 myTransaction.replace(R.id.content,currentFragment);
