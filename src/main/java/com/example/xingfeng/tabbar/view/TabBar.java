@@ -92,8 +92,6 @@ public class TabBar extends LinearLayout implements View.OnClickListener{
 
         initTabs();
 
-        cleraAllTextColor();
-
         setSelected(0);//默认选中第1个选项
     }
 
@@ -147,6 +145,10 @@ public class TabBar extends LinearLayout implements View.OnClickListener{
      */
     private void setSelected(int index){
 
+        //清空
+        cleraAllTextColor();
+        
+        //设置选项
         tabs[index].setTextColor(selectedColor);
 
     }
@@ -155,8 +157,6 @@ public class TabBar extends LinearLayout implements View.OnClickListener{
     public void onClick(View v) {
 
         int tag=(Integer)v.getTag();
-
-        cleraAllTextColor();
 
         setSelected(tag);
 
