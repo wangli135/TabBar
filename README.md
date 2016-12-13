@@ -3,11 +3,12 @@
 
 TabBar是顶部选项条，类似于TabHost。
 使用：
-  拷贝values文件夹下的attrs文件以及TabBar.java即可。
-  在布局文件中通过制定normalColor属性指明选项未被选中时的显示颜色，selectedColor属性指明选项被选中时的显示颜色。contentEntries属性指明所要显示的文本数组，在values文件夹下指定。
-  选项卡都可以选中，TabBar通过指定OnTabSelectedListener接口实现事件回调，其中TabBar内部已经做了显示颜色的变化，事件中只需处理具体事件。可以通过View.getTag获得View的索引，从0开始。
+  - 拷贝values文件夹下的attrs文件以及TabBar.java即可。
+  - 在布局文件中通过制定normalColor属性指明选项未被选中时的显示颜色，selectedColor属性指明选项被选中时的显示颜色。contentEntries属性指明所要显示的文本数组，在values文件夹下指定。
+  - 选项卡都可以选中，TabBar通过指定OnTabSelectedListener接口实现事件回调，其中TabBar内部已经做了显示颜色的变化，事件中只需处理具体事件。可以通过View.getTag获得View的索引，从0开始。
 例子：点击Tab切换Fragment的功能
-  布局文件：
+  布局文件：  
+  ```
   <com.example.xingfeng.tabbar.view.TabBar
         android:id="@+id/tabBar"
         android:background="#555"
@@ -17,7 +18,9 @@ TabBar是顶部选项条，类似于TabHost。
         app:normalColor="#929293"
         app:selectedColor="#B97A28"
         ></com.example.xingfeng.tabbar.view.TabBar>
- 设置监听：
+ ```
+ 设置监听：  
+ ```
      mTabBar.setOnTabSelectedListener(new TabBar.OnTabSelectedListener() {
             @Override
             public void onTabSelected(View v) {
@@ -31,4 +34,4 @@ TabBar是顶部选项条，类似于TabHost。
 
             }
         });
- 
+ ```
